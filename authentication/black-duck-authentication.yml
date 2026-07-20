@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://community.blackduck.com/s/article/Black-Duck-HUB-How-to-view-the-API-documentation
+docs: https://documentation.blackduck.com/category/api
+summary:
+  types: [apiKey, http]
+  api_key_in: [header]
+  token_exchange: true
+schemes:
+- name: api-token
+  type: apiKey
+  in: header
+  description: 'A per-user API token generated in the Black Duck UI (My Access Tokens). Clients
+    exchange the API token for a short-lived bearer token by POSTing to /api/tokens/authenticate
+    with header "Authorization: token <api-token>", then use the returned bearerToken on subsequent
+    requests.'
+- name: bearer
+  type: http
+  scheme: bearer
+  description: 'Short-lived bearer token returned by /api/tokens/authenticate, sent as "Authorization: Bearer <token>".'
+notes:
+- Black Duck OpenAPI and Postman artifacts are published per-server at /api-doc/openapi3-public.json
+  and /api-doc/postman-collection-public.json (require an authenticated session on that server).
+- Coverity Connect and Polaris use their own authentication surfaces; this profile documents the
+  Black Duck SCA (Hub) REST API token flow.
