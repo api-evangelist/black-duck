@@ -1,0 +1,17 @@
+generated: '2026-07-18'
+method: searched
+host: https://www.blackduck.com
+note: 'No /.well-known discovery documents were served. security.txt returned 404 on www.blackduck.com;
+  other probed paths returned 301 redirects with no discovery payload. Recorded for auditability — no
+  positive artifact, so no WellKnown/SecurityTxt pointer is wired.'
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 301
+- path: /.well-known/oauth-authorization-server
+  status: 301
+- path: /.well-known/api-catalog
+  status: 301
+- path: /.well-known/ai-plugin.json
+  status: 404

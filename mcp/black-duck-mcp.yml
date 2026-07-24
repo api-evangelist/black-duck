@@ -1,0 +1,26 @@
+generated: '2026-07-18'
+method: searched
+status: community
+source: https://www.pulsemcp.com/servers/black-duck
+official: false
+note: 'No first-party Black Duck-hosted MCP server was found as of this pass. Several community MCP
+  servers wrap the Black Duck public REST API; they are recorded here for discoverability and are
+  NOT published or endorsed by Black Duck. They authenticate with a Black Duck API token exchanged
+  for a bearer token (see authentication/black-duck-authentication.yml).'
+servers:
+- name: black-duck-mcp (community)
+  transport: stdio
+  language: python
+  repo: https://github.com/abhibnp/bd-mcp
+  registry: https://lobehub.com/mcp/abhibnp-bd-mcp
+  description: Python MCP server exposing common Black Duck public-API tasks as MCP tools.
+  env:
+  - BLACKDUCK_URL
+  - BLACKDUCK_API_TOKEN
+  official: false
+- name: coverity-connect-mcp (community)
+  transport: stdio
+  language: python
+  repo: https://github.com/keides2/coverity-connect-mcp
+  description: MCP server for the Black Duck Coverity Connect static-analysis platform.
+  official: false

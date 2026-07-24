@@ -1,8 +1,16 @@
 aid: black-duck
 name: Black Duck
-description: 'Black Duck is a company surfaced as a portfolio company of general-catalyst and added to
-  the API Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Black Duck Software (formerly the Synopsys Software Integrity Group) is an application
+  security company whose platform spans software composition analysis (SCA), static application
+  security testing (SAST), dynamic application security testing (DAST), interactive application
+  security testing (IAST), and open-source license and vulnerability management. Its API-first
+  products — Black Duck SCA (Hub), Polaris, Coverity, and Seeker — expose REST APIs, webhooks,
+  native CI/CD plug-ins, and the Detect command-line scanner so teams can automate open-source
+  discovery, policy enforcement, and risk remediation across build pipelines such as Jenkins,
+  GitHub Actions, GitLab CI, and Azure DevOps. Each Black Duck server publishes its own OpenAPI 3
+  document and Postman collection at /api-doc, and first-party Python and Go client libraries plus
+  the Detect CLI wrap the API surface. This profile was seeded as a general-catalyst portfolio lead
+  and enriched by the API Evangelist pipeline.'
 url: https://raw.githubusercontent.com/api-evangelist/black-duck/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,15 +18,107 @@ x-backed-by:
 - general-catalyst
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.blackduck.com/content/dam/black-duck/style-guide/header/BlackDuckLogo.svg
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Enterprise
-apis: []
+- Application Security
+- Software Composition Analysis
+- SAST
+- DAST
+- Open Source Security
+- DevSecOps
+- Vulnerability Management
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Black Duck SCA REST API
+  description: 'REST API for Black Duck SCA (Hub) — projects, versions, components, vulnerabilities,
+    policies, scans, and reports. Each Black Duck server publishes its own OpenAPI 3 document at
+    /api-doc/openapi3-public.json and a Postman collection at /api-doc/postman-collection-public.json;
+    authentication is via an API token exchanged for a bearer token.'
+  humanURL: https://documentation.blackduck.com/category/api
+  baseURL: https://polaris.blackduck.com
+  tags:
+  - Application Security
+  - Software Composition Analysis
+  - Vulnerability Management
+  properties:
+  - type: Documentation
+    url: https://documentation.blackduck.com/category/api
+  - type: Authentication
+    url: authentication/black-duck-authentication.yml
+common:
+- type: DomainSecurity
+  url: security/black-duck-domain-security.yml
+- type: DeveloperPortal
+  url: https://documentation.blackduck.com/
+- type: Documentation
+  url: https://documentation.blackduck.com/category/api
+- type: APIReference
+  url: https://community.blackduck.com/s/article/Blackduck-API-documentation-swagger
+- type: GettingStarted
+  url: https://community.blackduck.com/s/article/Black-Duck-HUB-How-to-view-the-API-documentation
+- type: Support
+  url: https://community.blackduck.com/s/
+- type: Blog
+  url: https://www.blackduck.com/blog.html
+- type: GitHubOrganization
+  url: https://github.com/blackducksoftware
+- type: Pricing
+  url: https://www.blackduck.com/software-composition-analysis-tools/black-duck-sca/get-pricing.html
+- type: SignUp
+  url: https://www.blackduck.com/software-composition-analysis-tools/black-duck-sca/get-pricing.html
+- type: TermsOfService
+  url: https://www.blackduck.com/company/legal/website-terms-of-use.html
+- type: PrivacyPolicy
+  url: https://www.blackduck.com/company/legal/privacy.html
+- type: Packages
+  url: packages/black-duck-packages.yml
+- type: SDKs
+  url: packages/black-duck-packages.yml
+- type: CLI
+  url: cli/black-duck-cli.yml
+- type: MCPServer
+  url: mcp/black-duck-mcp.yml
+- type: Authentication
+  url: authentication/black-duck-authentication.yml
+- type: Lifecycle
+  url: lifecycle/black-duck-lifecycle.yml
+- type: StatusPage
+  url: https://community.blackduck.com/s/black-duck-status
+- type: ChangeLog
+  url: changelog/black-duck-changelog.yml
+- type: TrustCenter
+  url: security/black-duck-trust-center.yml
+- type: Compliance
+  url: https://www.blackduck.com/company/legal/security-commitments.html
+- type: VulnerabilityDisclosure
+  url: security/black-duck-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.blackduck.com/company/legal/security-commitments.html
+- type: LLMsTxt
+  url: llms/black-duck-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

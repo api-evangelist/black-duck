@@ -1,0 +1,14 @@
+generated: '2026-07-18'
+method: searched
+source: https://documentation.blackduck.com/
+scheme: calendar-release
+current_version: '2026.1'
+docs: https://documentation.blackduck.com/
+note: 'Black Duck publishes per-release "Release Notes" and "What''s New" pages in the documentation
+  portal for each calendar release of Black Duck SCA, Polaris, Coverity, and Seeker. A structured,
+  machine-readable dated changelog was not located; entries below reference the release-notes surface
+  rather than fabricated dated rows.'
+entries:
+- version: '2026.1'
+  reference: https://documentation.blackduck.com/
+  highlights: Black Duck SCA calendar release; see per-release Release Notes in the documentation portal.

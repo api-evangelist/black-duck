@@ -1,0 +1,16 @@
+generated: '2026-07-18'
+method: searched
+source: https://documentation.blackduck.com/
+versioning:
+  scheme: calendar-release
+  current: '2026.1'
+  note: 'Black Duck SCA ships calendar-versioned releases (e.g. 2025.x, 2026.1.x). The REST API is
+    versioned via media-type/microversion headers on individual resources; each server publishes its
+    own OpenAPI 3 document at /api-doc/openapi3-public.json.'
+  docs: https://documentation.blackduck.com/category/api
+release_notes: https://documentation.blackduck.com/
+status_page: https://community.blackduck.com/s/black-duck-status
+support: https://community.blackduck.com/s/
+deprecation:
+  note: 'API resource microversions allow older representations to remain available while newer ones
+    are introduced; no public dated sunset policy was located in this pass.'

@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/blackducksoftware/detect
+name: Black Duck Detect
+description: 'Black Duck Detect (formerly Synopsys Detect) is the first-party command-line scanner
+  that runs SCA and other Black Duck analyses, discovers project dependencies, and uploads results
+  to a Black Duck SCA (Hub) or Polaris server.'
+docs: https://documentation.blackduck.com/bundle/detect/page/introduction.html
+repo: https://github.com/blackducksoftware/detect
+distribution: https://detect.blackduck.com/
+install:
+- method: bash
+  command: bash <(curl -s -L https://detect.blackduck.com/detect10.sh)
+- method: powershell
+  command: powershell "[Net.ServicePointManager]::SecurityProtocol = 'tls12'; irm https://detect.blackduck.com/detect10.ps1?$(Get-Random) | iex; detect"
+- method: gradle
+  command: gradlew detect (via com.blackduck.integration.detect plugin)
+capabilities:
+- Software Composition Analysis (SCA) dependency and signature scanning
+- Package-manager and build-tool integration (Maven, Gradle, npm, pip, NuGet, Go, etc.)
+- Binary and container image scanning
+- Policy evaluation and blocking of builds on policy violations
+- Rapid Scan (stateless) and Intelligent (persistent) scan modes
+key_flows:
+- name: Basic SCA scan
+  example: detect --blackduck.url=https://<server> --blackduck.api.token=<token> --detect.project.name=<name>
+- name: Rapid scan (no persistence)
+  example: detect --detect.blackduck.scan.mode=RAPID
+authentication: Black Duck API token via --blackduck.api.token (see authentication/black-duck-authentication.yml)

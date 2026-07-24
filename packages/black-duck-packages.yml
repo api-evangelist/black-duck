@@ -1,0 +1,39 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/blackducksoftware
+packages:
+- language: python
+  registry: pypi
+  name: blackduck
+  url: https://pypi.org/project/blackduck/
+  install: pip install blackduck
+  repo: https://github.com/blackducksoftware/hub-rest-api-python
+  description: Python bindings for the Black Duck (Hub) REST API.
+  official: true
+- language: python
+  registry: pypi
+  name: blackduck-c-cpp
+  url: https://pypi.org/project/blackduck-c-cpp/
+  install: pip install blackduck-c-cpp
+  description: Scanning for C/C++ projects using Black Duck and Coverity tools.
+  official: true
+- language: go
+  registry: github
+  name: hub-client-go
+  url: https://github.com/blackducksoftware/hub-client-go
+  install: go get github.com/blackducksoftware/hub-client-go
+  description: Black Duck Hub client library for Go.
+  official: true
+- language: java
+  registry: github
+  name: bdio
+  url: https://github.com/blackducksoftware/bdio
+  description: Black Duck I/O (BDIO) library — the data format for scan results.
+  official: true
+- language: java
+  registry: detect.blackduck.com
+  name: detect
+  url: https://github.com/blackducksoftware/detect
+  install: bash <(curl -s -L https://detect.blackduck.com/detect10.sh)
+  description: Black Duck Detect — scanning and analysis CLI for Black Duck SCA products. See cli/black-duck-cli.yml.
+  official: true

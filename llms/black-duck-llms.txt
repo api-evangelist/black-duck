@@ -1,0 +1,36 @@
+# Black Duck
+
+> Black Duck Software (formerly the Synopsys Software Integrity Group) is an application security company. Its platform covers software composition analysis (SCA), SAST, DAST, IAST, and open-source license and vulnerability management, exposed through REST APIs, webhooks, CI/CD plug-ins, and the Detect command-line scanner.
+
+## APIs
+
+- [Black Duck SCA REST API](https://documentation.blackduck.com/category/api): Projects, versions, components, vulnerabilities, policies, scans, and reports. Each server publishes its own OpenAPI 3 document at /api-doc/openapi3-public.json and a Postman collection at /api-doc/postman-collection-public.json.
+
+## Docs
+
+- [Documentation portal](https://documentation.blackduck.com/): Product and API documentation for Black Duck SCA, Polaris, Coverity, and Seeker.
+- [API documentation / Swagger](https://community.blackduck.com/s/article/Blackduck-API-documentation-swagger): How to view the interactive API reference on a Black Duck server.
+- [OpenAPI Specification for Black Duck API](https://community.blackduck.com/s/article/OpenAPI-Specification-for-Black-Duck-API): Generating the OpenAPI 3 spec from a Black Duck server.
+- [Community](https://community.blackduck.com/s/): Support, knowledge base, and REST API topics.
+
+## Authentication
+
+- API token exchanged for a short-lived bearer token via /api/tokens/authenticate. See authentication/black-duck-authentication.yml.
+
+## SDKs and tools
+
+- [blackduck (PyPI)](https://pypi.org/project/blackduck/): Official Python bindings for the Hub REST API.
+- [hub-client-go](https://github.com/blackducksoftware/hub-client-go): Official Go client library.
+- [Black Duck Detect](https://github.com/blackducksoftware/detect): Official CLI scanner (detect.blackduck.com).
+- [GitHub organization](https://github.com/blackducksoftware): First-party libraries, integrations, and plug-ins.
+
+## Security and compliance
+
+- [Security Commitments](https://www.blackduck.com/company/legal/security-commitments.html): SOC 2 Type 2, SOC 3, ISO 27001, ISO 27017, ISO 26262, CSA STAR, TISAX, TX-RAMP.
+- [Status](https://community.blackduck.com/s/black-duck-status): Service status.
+
+## Commercial
+
+- [Pricing](https://www.blackduck.com/software-composition-analysis-tools/black-duck-sca/get-pricing.html)
+- [Terms of Use](https://www.blackduck.com/company/legal/website-terms-of-use.html)
+- [Privacy](https://www.blackduck.com/company/legal/privacy.html)
