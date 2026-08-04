@@ -1,6 +1,7 @@
 generated: '2026-07-18'
 method: searched
-status: community
+status: third-party
+status_raw: community
 source: https://www.pulsemcp.com/servers/black-duck
 official: false
 note: 'No first-party Black Duck-hosted MCP server was found as of this pass. Several community MCP
