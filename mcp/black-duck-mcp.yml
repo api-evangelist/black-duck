@@ -4,10 +4,10 @@ status: third-party
 status_raw: community
 source: https://www.pulsemcp.com/servers/black-duck
 official: false
-note: 'No first-party Black Duck-hosted MCP server was found as of this pass. Several community MCP
-  servers wrap the Black Duck public REST API; they are recorded here for discoverability and are
-  NOT published or endorsed by Black Duck. They authenticate with a Black Duck API token exchanged
-  for a bearer token (see authentication/black-duck-authentication.yml).'
+note: No first-party Black Duck-hosted MCP server was found as of this pass. Several community MCP servers
+  wrap the Black Duck public REST API; they are recorded here for discoverability and are NOT published
+  or endorsed by Black Duck. They authenticate with a Black Duck API token exchanged for a bearer token
+  (see authentication/black-duck-authentication.yml).
 servers:
 - name: black-duck-mcp (community)
   transport: stdio
@@ -25,3 +25,8 @@ servers:
   repo: https://github.com/keides2/coverity-connect-mcp
   description: MCP server for the Black Duck Coverity Connect static-analysis platform.
   official: false
+deployment:
+  mode: third-party
+  verified: searched
+  checked: '2026-08-12'
+  source: catalog MCP census
