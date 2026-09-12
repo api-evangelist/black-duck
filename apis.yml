@@ -79,6 +79,8 @@ apis:
   - type: Authentication
     url: authentication/black-duck-authentication.yml
 common:
+- type: Website
+  url: https://www.blackduck.com/
 - type: DomainSecurity
   url: security/black-duck-domain-security.yml
 - type: DeveloperPortal
