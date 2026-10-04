@@ -26,7 +26,8 @@ servers:
   description: MCP server for the Black Duck Coverity Connect static-analysis platform.
   official: false
 deployment:
-  mode: third-party
+  mode: remote
   verified: searched
+  endpoint: https://www.pulsemcp.com/servers/black-duck
   checked: '2026-08-12'
   source: catalog MCP census

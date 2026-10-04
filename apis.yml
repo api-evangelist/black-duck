@@ -1,23 +1,27 @@
 aid: black-duck
+
 name: Black Duck
-description: 'Black Duck Software (formerly the Synopsys Software Integrity Group) is an application
-  security company whose platform spans software composition analysis (SCA), static application
-  security testing (SAST), dynamic application security testing (DAST), interactive application
-  security testing (IAST), and open-source license and vulnerability management. Its API-first
-  products — Black Duck SCA (Hub), Polaris, Coverity, and Seeker — expose REST APIs, webhooks,
-  native CI/CD plug-ins, and the Detect command-line scanner so teams can automate open-source
-  discovery, policy enforcement, and risk remediation across build pipelines such as Jenkins,
-  GitHub Actions, GitLab CI, and Azure DevOps. Each Black Duck server publishes its own OpenAPI 3
-  document and Postman collection at /api-doc, and first-party Python and Go client libraries plus
-  the Detect CLI wrap the API surface. This profile was seeded as a general-catalyst portfolio lead
-  and enriched by the API Evangelist pipeline.'
+
+description: Black Duck Software (formerly the Synopsys Software Integrity Group) is an application security company whose platform spans software
+  composition analysis (SCA), static application security testing (SAST), dynamic application security testing (DAST), interactive application
+  security testing (IAST), and open-source license and vulnerability management. Its API-first products — Black Duck SCA (Hub), Polaris, Coverity,
+  and Seeker — expose REST APIs, webhooks, native CI/CD plug-ins, and the Detect command-line scanner so teams can automate open-source discovery,
+  policy enforcement, and risk remediation across build pipelines such as Jenkins, GitHub Actions, GitLab CI, and Azure DevOps. Each Black Duck
+  server publishes its own OpenAPI 3 document and Postman collection at /api-doc, and first-party Python and Go client libraries plus the Detect
+  CLI wrap the API surface. This profile was seeded as a general-catalyst portfolio lead and enriched by the API Evangelist pipeline.
+
 url: https://raw.githubusercontent.com/api-evangelist/black-duck/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: vc-portfolio
+
 x-backed-by:
 - general-catalyst
-x-tier: stub
-x-tier-reason: portfolio-lead
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-03 (modular-v1; was portfolio-lead)
+
 deliveryModel:
   model: saas
   open_source: false
@@ -29,6 +33,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -42,10 +47,15 @@ accessModel:
   - security
   generated: '2026-09-03'
   method: derived
+
 image: https://www.blackduck.com/content/dam/black-duck/style-guide/header/BlackDuckLogo.svg
+
 specificationVersion: '0.23'
+
 created: '2026-07-17'
+
 modified: '2026-07-18'
+
 tags:
 - Company
 - Enterprise
@@ -56,29 +66,32 @@ tags:
 - Open Source Security
 - DevSecOps
 - Vulnerability Management
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-apis:
-- name: Black Duck SCA REST API
-  description: 'REST API for Black Duck SCA (Hub) — projects, versions, components, vulnerabilities,
-    policies, scans, and reports. Each Black Duck server publishes its own OpenAPI 3 document at
-    /api-doc/openapi3-public.json and a Postman collection at /api-doc/postman-collection-public.json;
-    authentication is via an API token exchanged for a bearer token.'
-  humanURL: https://documentation.blackduck.com/category/api
-  baseURL: https://polaris.blackduck.com
-  tags:
-  - Application Security
-  - Software Composition Analysis
-  - Vulnerability Management
-  properties:
-  - type: Documentation
-    url: https://documentation.blackduck.com/category/api
-  - type: Authentication
-    url: authentication/black-duck-authentication.yml
+
 common:
+- type: PrivacyPolicy
+  url: https://www.blackduck.com/company/legal/privacy-policy.html
+- type: Spectral
+  url: rules/black-duck-rules.yml
+- type: JSONLD
+  url: json-ld/black-duck-context.jsonld
+- type: Vocabulary
+  url: vocabulary/black-duck-vocabulary.yml
+- type: DataModel
+  url: data-model/black-duck-data-model.yml
+- type: Conformance
+  url: conformance/black-duck-conformance.yml
+- type: X-MCPServerCandidate
+  url: mcp/black-duck-mcp.yml
+- type: Hosts
+  url: hosts/black-duck-hosts.yml
+- type: Vendors
+  url: vendors/black-duck-vendors.yml
 - type: Website
   url: https://www.blackduck.com/
 - type: DomainSecurity
@@ -101,10 +114,6 @@ common:
   url: https://www.blackduck.com/software-composition-analysis-tools/black-duck-sca/get-pricing.html
 - type: SignUp
   url: https://www.blackduck.com/software-composition-analysis-tools/black-duck-sca/get-pricing.html
-- type: TermsOfService
-  url: https://www.blackduck.com/company/legal/website-terms-of-use.html
-- type: PrivacyPolicy
-  url: https://www.blackduck.com/company/legal/privacy.html
 - type: Packages
   url: packages/black-duck-packages.yml
 - type: SDKs
@@ -129,10 +138,54 @@ common:
   url: security/black-duck-vulnerability-disclosure.yml
 - type: Security
   url: https://www.blackduck.com/company/legal/security-commitments.html
-- type: LLMsTxt
-  url: llms/black-duck-llms.txt
+
+apis:
+- name: Black Duck SCA REST API
+  description: REST API for Black Duck SCA (Hub) — projects, versions, components, vulnerabilities, policies, scans, and reports. Each Black Duck
+    server publishes its own OpenAPI 3 document at /api-doc/openapi3-public.json and a Postman collection at /api-doc/postman-collection-public.json;
+    authentication is via an API token exchanged for a bearer token.
+  humanURL: https://documentation.blackduck.com/category/api
+  baseURL: https://polaris.blackduck.com
+  tags:
+  - Application Security
+  - Software Composition Analysis
+  - Vulnerability Management
+  properties:
+  - type: Documentation
+    url: https://documentation.blackduck.com/category/api
+  - type: Authentication
+    url: authentication/black-duck-authentication.yml
+  aid: black-duck:black-duck-sca-rest-api
+- aid: black-duck:black-duck-api
+  name: Black Duck API
+  description: 'Black Duck API as documented publicly: 7 operations. Contract generated from the documentation by API Evangelist (2026-10-03);
+
+    not the provider''s own document.'
+  humanURL: https://community.blackduck.com/s/article/vulnerable-bom-components-api-only-returns-10-vulnerabilities
+  baseURL: https://xxx.app.blackduck.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/black-duck-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/black-duck-get-api-v2-issues-sourcecodeinfo-response-schema.json
+  - type: JSONSchema
+    url: json-schema/black-duck-put-api-projects19-a61354-doc25-d408374-ba71-f3-dd6983-versions-abqwe3-schema.json
+  - type: JSONSchema
+    url: json-schema/black-duck-put-api-projects-projectid-versions-projectversionid-components-com-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI or other machine-readable contract found despite API documentation at https://documentation.blackduck.com/category/api.
+  evidence:
+  - url: https://api.blackduck.com/openapi.json
+    status: 0
+  checked: '2026-10-03'
+
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
-  pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  date: '2026-10-03'
+  status: enriched
+  artifacts_added: 12
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

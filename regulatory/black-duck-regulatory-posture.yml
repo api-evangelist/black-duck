@@ -1,0 +1,20 @@
+generated: '2026-10-03'
+method: probed
+source: https://www.blackduck.com/company/legal/security-commitments.html
+signals:
+  incident_notification:
+    evidence:
+      - source: https://www.blackduck.com/company/legal/security-commitments.html
+        http_status: 200
+        fetched: '2026-10-03'
+        quote: "Black Duck has established policy, process, and procedure to ensure a quick, effective, and orderly response to cybersecurity incidents."
+        section: Incident Management
+        note: Describes incident response policy and notification.
+  data_retention:
+    evidence:
+      - source: https://www.blackduck.com/company/legal/security-commitments.html
+        http_status: 200
+        fetched: '2026-10-03'
+        quote: "Customer data are backed up daily with a 7-day retention policy."
+        section: Data Retention
+        note: States backup retention period for customer data.

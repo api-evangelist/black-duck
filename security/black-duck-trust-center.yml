@@ -12,10 +12,10 @@ certifications:
 - TISAX (Assessment Level 2)
 - TX-RAMP Level 2
 frameworks:
-- ISO 27001
-- ISO 27002
-- NIST SP 800-53
-- NIST CSF
+- name: ISO 27001
+- name: ISO 27002
+- name: NIST SP 800-53
+- name: NIST CSF
 scope: 'Black Duck Software Inc. operates an ISMS conforming to ISO/IEC 27001:2022 covering its IT
   and Cloud Operations processes supporting the Managed Services Portal, Polaris (Classic and Next
   Generation), and Black Duck applications.'

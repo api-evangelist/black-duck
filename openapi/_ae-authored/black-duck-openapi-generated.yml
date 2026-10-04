@@ -1,0 +1,284 @@
+openapi: 3.1.0
+info:
+  title: Black Duck API
+  version: '2026-10-03'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-03: 7 operation(s) read from 10 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Black Duck has published no machine-readable contract that the
+    pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 6
+    pages-with-code: 2
+    pages-read: 10
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-03'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://community.blackduck.com/s/article/vulnerable-bom-components-api-only-returns-10-vulnerabilities
+  - https://community.blackduck.com/s/article/How-to-access-Swagger-API-UI-in-SRM
+  - https://community.blackduck.com/s/article/vulnerable-bom-components-api-only-returns-10-vulnerabilities?nocache=https%3A%2F%2Fcommunity.blackduck.com%2Fs%2Farticle%2Fvulnerable-bom-components-api-only-returns-10-vulnerabilities
+  - https://community.blackduck.com/s/article/How-to-export-list-of-Users
+  - https://community.blackduck.com/s/article/How-to-extract-detailed-information-of-specific-CID-including-all-event-information-from-Coverity-Connect-using-REST-API
+  - https://community.blackduck.com/s/article/How-to-access-Swagger-API-UI-in-SRM?nocache=https%3A%2F%2Fcommunity.blackduck.com%2Fs%2Farticle%2FHow-to-access-Swagger-API-UI-in-SRM
+  - https://community.blackduck.com/s/article/Synopsys-Detect-fails-with-Signature-scanner-error-return-code-77
+  - https://community.blackduck.com/s/article/How-to-export-list-of-Users?nocache=https%3A%2F%2Fcommunity.blackduck.com%2Fs%2Farticle%2FHow-to-export-list-of-Users
+  - https://community.blackduck.com/s/article/List-all-component-in-use
+  - https://community.blackduck.com/s/article/Script-using-Black-Duck-Hub-Rest-API-to-is-failing-with-error-Input-request-parsing-error-or-http-status-412
+servers:
+- url: https://xxx.app.blackduck.com
+paths:
+  ? /api/projects/19a61354-doc2-5d40-8374-ba71f3dd6983/versions/abqwe336-dee2-4123-a47a-844gfa373a21/components/dc3dee66-4939-4dea-b22f-ead288b4f117/versions/588e017c-8d3f-41c7-95ad-61ae859d8607
+  : put:
+      operationId: put_api_projects_19a61354_doc2_5d40_8374_ba71f3dd6983_versions_abqwe336_dee2_412
+      tags:
+      - Api
+      summary: Script using Black Duck Hub Rest API to is failing with error 'Input request parsing error' or http status 412
+      description: PUT request to update a BOM component version; the API requires a 'componentType' property in the request body.
+      x-source: https://community.blackduck.com/s/article/Script-using-Black-Duck-Hub-Rest-API-to-is-failing-with-error-Input-request-parsing-error-or-http-status-412
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutApiProjects19A61354Doc25D408374Ba71F3Dd6983VersionsAbqwe3'
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/projects/{projectid}/versions/{projectversionid}/components/{componentid}:
+    put:
+      operationId: put_api_projects_projectid_versions_projectversionid_components_componentid
+      tags:
+      - Api
+      summary: Script using Black Duck Hub Rest API to is failing with error 'Input request parsing error' or http status 412
+      description: PUT request to update a component in a project version; requires 'componentType' in the request body.
+      x-source: https://community.blackduck.com/s/article/Script-using-Black-Duck-Hub-Rest-API-to-is-failing-with-error-Input-request-parsing-error-or-http-status-412
+      parameters:
+      - name: projectid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: projectversionid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: componentid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutApiProjectsProjectidVersionsProjectversionidComponentsCom'
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/projects/{projectid}/versions/{projectversionid}/vulnerable-bom-components:
+    get:
+      operationId: get_api_projects_projectid_versions_projectversionid_vulnerable_bom_components
+      tags:
+      - Api
+      summary: vulnerable-bom-components api only returns 10 vulnerabilities
+      x-source: https://community.blackduck.com/s/article/vulnerable-bom-components-api-only-returns-10-vulnerabilities
+      parameters:
+      - name: projectid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: projectversionid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Number of items to return (default is 10).
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/search/components-in-use:
+    get:
+      operationId: get_api_search_components_in_use
+      tags:
+      - Api
+      summary: List all component in use
+      x-source: https://community.blackduck.com/s/article/List-all-component-in-use
+      parameters:
+      - name: Accept
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/vnd.blackducksoftware.report-1+csv
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/v2/issues/sourceCodeInfo:
+    get:
+      operationId: get_api_v2_issues_sourceCodeInfo
+      tags:
+      - Api
+      summary: How to extract detailed information of specific CID including all event information from Coverity Connect using REST API
+      x-source: https://community.blackduck.com/s/article/How-to-extract-detailed-information-of-specific-CID-including-all-event-information-from-Coverity-Connect-using-REST-API
+      parameters:
+      - name: cid
+        in: query
+        required: true
+        schema:
+          type: string
+        description: your interesting CID number
+      - name: streamName
+        in: query
+        required: true
+        schema:
+          type: string
+        description: your interesting stream name
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV2IssuesSourcecodeinfoResponse'
+      x-evidence:
+        kind: documentation
+  /api/v2/users:
+    get:
+      operationId: get_api_v2_users
+      tags:
+      - Api
+      summary: 'Synopsys Detect fails with Signature scanner error: return code 77'
+      x-source: https://community.blackduck.com/s/article/Synopsys-Detect-fails-with-Signature-scanner-error-return-code-77
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/{apiid}:
+    get:
+      operationId: get_api_apiid
+      tags:
+      - Api
+      summary: How to export list of Users
+      description: 'Retrieves the current user information. Accept header: application/vnd.blackducksoftware.user-4+json'
+      x-source: https://community.blackduck.com/s/article/How-to-export-list-of-Users
+      parameters:
+      - name: apiid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at apiId
+components:
+  schemas:
+    PutApiProjects19A61354Doc25D408374Ba71F3Dd6983VersionsAbqwe3:
+      type: object
+      properties:
+        componentType:
+          type: string
+          description: Missing required creator property 'componentType' in the JSON for the versionBomComponentView parameter.
+      required:
+      - componentType
+    PutApiProjectsProjectidVersionsProjectversionidComponentsCom:
+      type: object
+      properties:
+        componentType:
+          type: string
+          description: Missing required creator property 'componentType' in the JSON for the versionBomComponentView parameter.
+      required:
+      - componentType
+    GetApiV2IssuesSourcecodeinfoResponse:
+      type: object
+      properties:
+        checkerName:
+          type: string
+        domain:
+          type: string
+        issueOccurrences:
+          type: array
+          description: list of issue occurrence objects
+        issueOccurrences[].domain:
+          type: string
+        issueOccurrences[].eLearningCweUrl:
+          type: string
+          description: nullable
+        issueOccurrences[].events:
+          type: array
+          description: list of event objects
+        issueOccurrences[].events[].eventDescription:
+          type: string
+        issueOccurrences[].events[].eventTag:
+          type: string
+        issueOccurrences[].events[].eventKind:
+          type: string
+        issueOccurrences[].events[].eventNumber:
+          type: string
+        issueOccurrences[].events[].eventSet:
+          type: string
+          description: nullable
+        issueOccurrences[].events[].moreInformationUrl:
+          type: string
+          description: nullable
+        issueOccurrences[].events[].pathCondition:
+          type: string
+          description: nullable
+        issueOccurrences[].events[].polarity:
+          type: string
+          description: nullable
+        issueOccurrences[].events[].main:
+          type: boolean
+          description: nullable
+        issueOccurrences[].events[].lineNumber:
+          type: string
+        issueOccurrences[].events[].file:
+          type: object
+        issueOccurrences[].events[].file.contentsMD5:
+          type: string
+        issueOccurrences[].events[].file.filePathname:
+          type: string
+        issueOccurrences[].id:
+          type: string
+        issueOccurrences[].localEffect:
+          type: string
+        issueOccurrences[].longDescription:
+          type: string
+        issueOccurrences[].secureCodeWarrior:
+          type: object
+        issueOccurrences[].secureCodeWarrior.learningVideoUrls:
+          type: string
+          description: nullable
+        issueOccurrences[].secureCodeWarrior.portalUrl:
+          type: string
+          description: nullable
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+security:
+- bearer: []
+tags:
+- name: Api

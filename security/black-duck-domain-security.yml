@@ -1,29 +1,35 @@
-generated: '2026-07-18'
+generated: '2026-10-03'
 method: probed
 source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
 hosts:
+- host: www.blackduck.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Mar 18 23:59:59 2027 GMT
+  hsts: true
+  hsts_max_age: 31536000
 - host: documentation.blackduck.com
   https: true
   tls_version: TLSv1.3
-  cert_expires: Sep 13 20:06:32 2026 GMT
+  cert_expires: Dec 30 14:54:24 2026 GMT
   hsts: true
   hsts_max_age: 31536000
 - host: polaris.blackduck.com
   https: true
   tls_version: TLSv1.3
-  cert_expires: Sep 22 23:59:59 2026 GMT
+  cert_expires: Apr  2 23:59:59 2027 GMT
   hsts: true
   hsts_max_age: 31536000
 domains:
 - domain: blackduck.com
   dnssec: false
   caa:
-  - 0 issue "entrust.net"
-  - 0 issue "amazonaws.com"
-  - 0 issue "digicert.com"
-  - 0 issuewild "sectigo.com"
-  - 0 issue "pki.goog"
+  - 0 issue "sectigo.com"
   - 0 issuewild "pki.goog; cansignhttpexchanges=yes"
+  - 0 issuewild "sectigo.com"
+  - 0 issue "globalsign.com"
+  - 0 issue "amazonaws.com"
+  - 0 issue "amazontrust.com"
   spf: true
   dmarc: true
   dmarc_policy: quarantine

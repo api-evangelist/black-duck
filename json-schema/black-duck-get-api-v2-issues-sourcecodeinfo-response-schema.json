@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/black-duck/main/json-schema/black-duck-get-api-v2-issues-sourcecodeinfo-response-schema.json",
+  "title": "GetApiV2IssuesSourcecodeinfoResponse",
+  "x-generated": "2026-10-03",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/black-duck-openapi-generated.yml#/components/schemas/GetApiV2IssuesSourcecodeinfoResponse",
+  "type": "object",
+  "properties": {
+    "checkerName": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "issueOccurrences": {
+      "type": "array",
+      "description": "list of issue occurrence objects"
+    },
+    "issueOccurrences[].domain": {
+      "type": "string"
+    },
+    "issueOccurrences[].eLearningCweUrl": {
+      "type": "string",
+      "description": "nullable"
+    },
+    "issueOccurrences[].events": {
+      "type": "array",
+      "description": "list of event objects"
+    },
+    "issueOccurrences[].events[].eventDescription": {
+      "type": "string"
+    },
+    "issueOccurrences[].events[].eventTag": {
+      "type": "string"
+    },
+    "issueOccurrences[].events[].eventKind": {
+      "type": "string"
+    },
+    "issueOccurrences[].events[].eventNumber": {
+      "type": "string"
+    },
+    "issueOccurrences[].events[].eventSet": {
+      "type": "string",
+      "description": "nullable"
+    },
+    "issueOccurrences[].events[].moreInformationUrl": {
+      "type": "string",
+      "description": "nullable"
+    },
+    "issueOccurrences[].events[].pathCondition": {
+      "type": "string",
+      "description": "nullable"
+    },
+    "issueOccurrences[].events[].polarity": {
+      "type": "string",
+      "description": "nullable"
+    },
+    "issueOccurrences[].events[].main": {
+      "type": "boolean",
+      "description": "nullable"
+    },
+    "issueOccurrences[].events[].lineNumber": {
+      "type": "string"
+    },
+    "issueOccurrences[].events[].file": {
+      "type": "object"
+    },
+    "issueOccurrences[].events[].file.contentsMD5": {
+      "type": "string"
+    },
+    "issueOccurrences[].events[].file.filePathname": {
+      "type": "string"
+    },
+    "issueOccurrences[].id": {
+      "type": "string"
+    },
+    "issueOccurrences[].localEffect": {
+      "type": "string"
+    },
+    "issueOccurrences[].longDescription": {
+      "type": "string"
+    },
+    "issueOccurrences[].secureCodeWarrior": {
+      "type": "object"
+    },
+    "issueOccurrences[].secureCodeWarrior.learningVideoUrls": {
+      "type": "string",
+      "description": "nullable"
+    },
+    "issueOccurrences[].secureCodeWarrior.portalUrl": {
+      "type": "string",
+      "description": "nullable"
+    }
+  }
+}

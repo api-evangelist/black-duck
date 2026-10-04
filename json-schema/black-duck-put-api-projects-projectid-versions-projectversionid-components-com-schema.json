@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/black-duck/main/json-schema/black-duck-put-api-projects-projectid-versions-projectversionid-components-com-schema.json",
+  "title": "PutApiProjectsProjectidVersionsProjectversionidComponentsCom",
+  "x-generated": "2026-10-03",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/black-duck-openapi-generated.yml#/components/schemas/PutApiProjectsProjectidVersionsProjectversionidComponentsCom",
+  "type": "object",
+  "properties": {
+    "componentType": {
+      "type": "string",
+      "description": "Missing required creator property 'componentType' in the JSON for the versionBomComponentView parameter."
+    }
+  },
+  "required": [
+    "componentType"
+  ]
+}
