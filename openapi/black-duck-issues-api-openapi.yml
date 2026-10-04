@@ -1,0 +1,132 @@
+openapi: 3.2.0
+info:
+  title: Black Duck Issues API
+  version: '2026-10-03'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-03: 7 operation(s) read from 10 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Black Duck has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 6
+    pages-with-code: 2
+    pages-read: 10
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-03'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://community.blackduck.com/s/article/vulnerable-bom-components-api-only-returns-10-vulnerabilities
+  - https://community.blackduck.com/s/article/How-to-access-Swagger-API-UI-in-SRM
+  - https://community.blackduck.com/s/article/vulnerable-bom-components-api-only-returns-10-vulnerabilities?nocache=https%3A%2F%2Fcommunity.blackduck.com%2Fs%2Farticle%2Fvulnerable-bom-components-api-only-returns-10-vulnerabilities
+  - https://community.blackduck.com/s/article/How-to-export-list-of-Users
+  - https://community.blackduck.com/s/article/How-to-extract-detailed-information-of-specific-CID-including-all-event-information-from-Coverity-Connect-using-REST-API
+  - https://community.blackduck.com/s/article/How-to-access-Swagger-API-UI-in-SRM?nocache=https%3A%2F%2Fcommunity.blackduck.com%2Fs%2Farticle%2FHow-to-access-Swagger-API-UI-in-SRM
+  - https://community.blackduck.com/s/article/Synopsys-Detect-fails-with-Signature-scanner-error-return-code-77
+  - https://community.blackduck.com/s/article/How-to-export-list-of-Users?nocache=https%3A%2F%2Fcommunity.blackduck.com%2Fs%2Farticle%2FHow-to-export-list-of-Users
+  - https://community.blackduck.com/s/article/List-all-component-in-use
+  - https://community.blackduck.com/s/article/Script-using-Black-Duck-Hub-Rest-API-to-is-failing-with-error-Input-request-parsing-error-or-http-status-412
+servers:
+- url: https://xxx.app.blackduck.com
+security:
+- bearer: []
+tags:
+- name: Issues
+paths:
+  /api/v2/issues/sourceCodeInfo:
+    get:
+      operationId: get_api_v2_issues_sourceCodeInfo
+      tags:
+      - Issues
+      summary: How to extract detailed information of specific CID including all event…
+      x-source: https://community.blackduck.com/s/article/How-to-extract-detailed-information-of-specific-CID-including-all-event-information-from-Coverity-Connect-using-REST-API
+      parameters:
+      - name: cid
+        in: query
+        required: true
+        schema:
+          type: string
+        description: your interesting CID number
+      - name: streamName
+        in: query
+        required: true
+        schema:
+          type: string
+        description: your interesting stream name
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV2IssuesSourcecodeinfoResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetApiV2IssuesSourcecodeinfoResponse:
+      type: object
+      properties:
+        checkerName:
+          type: string
+        domain:
+          type: string
+        issueOccurrences:
+          type: array
+          description: list of issue occurrence objects
+        issueOccurrences[].domain:
+          type: string
+        issueOccurrences[].eLearningCweUrl:
+          type: string
+          description: nullable
+        issueOccurrences[].events:
+          type: array
+          description: list of event objects
+        issueOccurrences[].events[].eventDescription:
+          type: string
+        issueOccurrences[].events[].eventTag:
+          type: string
+        issueOccurrences[].events[].eventKind:
+          type: string
+        issueOccurrences[].events[].eventNumber:
+          type: string
+        issueOccurrences[].events[].eventSet:
+          type: string
+          description: nullable
+        issueOccurrences[].events[].moreInformationUrl:
+          type: string
+          description: nullable
+        issueOccurrences[].events[].pathCondition:
+          type: string
+          description: nullable
+        issueOccurrences[].events[].polarity:
+          type: string
+          description: nullable
+        issueOccurrences[].events[].main:
+          type: boolean
+          description: nullable
+        issueOccurrences[].events[].lineNumber:
+          type: string
+        issueOccurrences[].events[].file:
+          type: object
+        issueOccurrences[].events[].file.contentsMD5:
+          type: string
+        issueOccurrences[].events[].file.filePathname:
+          type: string
+        issueOccurrences[].id:
+          type: string
+        issueOccurrences[].localEffect:
+          type: string
+        issueOccurrences[].longDescription:
+          type: string
+        issueOccurrences[].secureCodeWarrior:
+          type: object
+        issueOccurrences[].secureCodeWarrior.learningVideoUrls:
+          type: string
+          description: nullable
+        issueOccurrences[].secureCodeWarrior.portalUrl:
+          type: string
+          description: nullable
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

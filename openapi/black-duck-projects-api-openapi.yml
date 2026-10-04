@@ -1,0 +1,139 @@
+openapi: 3.2.0
+info:
+  title: Black Duck Projects API
+  version: '2026-10-03'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-03: 7 operation(s) read from 10 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Black Duck has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 6
+    pages-with-code: 2
+    pages-read: 10
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-03'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://community.blackduck.com/s/article/vulnerable-bom-components-api-only-returns-10-vulnerabilities
+  - https://community.blackduck.com/s/article/How-to-access-Swagger-API-UI-in-SRM
+  - https://community.blackduck.com/s/article/vulnerable-bom-components-api-only-returns-10-vulnerabilities?nocache=https%3A%2F%2Fcommunity.blackduck.com%2Fs%2Farticle%2Fvulnerable-bom-components-api-only-returns-10-vulnerabilities
+  - https://community.blackduck.com/s/article/How-to-export-list-of-Users
+  - https://community.blackduck.com/s/article/How-to-extract-detailed-information-of-specific-CID-including-all-event-information-from-Coverity-Connect-using-REST-API
+  - https://community.blackduck.com/s/article/How-to-access-Swagger-API-UI-in-SRM?nocache=https%3A%2F%2Fcommunity.blackduck.com%2Fs%2Farticle%2FHow-to-access-Swagger-API-UI-in-SRM
+  - https://community.blackduck.com/s/article/Synopsys-Detect-fails-with-Signature-scanner-error-return-code-77
+  - https://community.blackduck.com/s/article/How-to-export-list-of-Users?nocache=https%3A%2F%2Fcommunity.blackduck.com%2Fs%2Farticle%2FHow-to-export-list-of-Users
+  - https://community.blackduck.com/s/article/List-all-component-in-use
+  - https://community.blackduck.com/s/article/Script-using-Black-Duck-Hub-Rest-API-to-is-failing-with-error-Input-request-parsing-error-or-http-status-412
+servers:
+- url: https://xxx.app.blackduck.com
+security:
+- bearer: []
+tags:
+- name: Projects
+paths:
+  ? /api/projects/19a61354-doc2-5d40-8374-ba71f3dd6983/versions/abqwe336-dee2-4123-a47a-844gfa373a21/components/dc3dee66-4939-4dea-b22f-ead288b4f117/versions/588e017c-8d3f-41c7-95ad-61ae859d8607
+  : put:
+      operationId: put_api_projects_19a61354_doc2_5d40_8374_ba71f3dd6983_versions_abqwe336_dee2_412
+      tags:
+      - Projects
+      summary: Script using Black Duck Hub Rest API to is failing with error 'Input request…
+      description: PUT request to update a BOM component version; the API requires a 'componentType' property in the request body.
+      x-source: https://community.blackduck.com/s/article/Script-using-Black-Duck-Hub-Rest-API-to-is-failing-with-error-Input-request-parsing-error-or-http-status-412
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutApiProjects19A61354Doc25D408374Ba71F3Dd6983VersionsAbqwe3'
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/projects/{projectid}/versions/{projectversionid}/components/{componentid}:
+    put:
+      operationId: put_api_projects_projectid_versions_projectversionid_components_componentid
+      tags:
+      - Projects
+      summary: Script using Black Duck Hub Rest API to is failing with error 'Input request…
+      description: PUT request to update a component in a project version; requires 'componentType' in the request body.
+      x-source: https://community.blackduck.com/s/article/Script-using-Black-Duck-Hub-Rest-API-to-is-failing-with-error-Input-request-parsing-error-or-http-status-412
+      parameters:
+      - name: projectid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: projectversionid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: componentid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutApiProjectsProjectidVersionsProjectversionidComponentsCom'
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/projects/{projectid}/versions/{projectversionid}/vulnerable-bom-components:
+    get:
+      operationId: get_api_projects_projectid_versions_projectversionid_vulnerable_bom_components
+      tags:
+      - Projects
+      summary: vulnerable-bom-components api only returns 10 vulnerabilities
+      x-source: https://community.blackduck.com/s/article/vulnerable-bom-components-api-only-returns-10-vulnerabilities
+      parameters:
+      - name: projectid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: projectversionid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Number of items to return (default is 10).
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PutApiProjects19A61354Doc25D408374Ba71F3Dd6983VersionsAbqwe3:
+      type: object
+      properties:
+        componentType:
+          type: string
+          description: Missing required creator property 'componentType' in the JSON for the versionBomComponentView parameter.
+      required:
+      - componentType
+    PutApiProjectsProjectidVersionsProjectversionidComponentsCom:
+      type: object
+      properties:
+        componentType:
+          type: string
+          description: Missing required creator property 'componentType' in the JSON for the versionBomComponentView parameter.
+      required:
+      - componentType
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

@@ -141,9 +141,11 @@ common:
 
 apis:
 - name: Black Duck SCA REST API
-  description: REST API for Black Duck SCA (Hub) — projects, versions, components, vulnerabilities, policies, scans, and reports. Each Black Duck
-    server publishes its own OpenAPI 3 document at /api-doc/openapi3-public.json and a Postman collection at /api-doc/postman-collection-public.json;
-    authentication is via an API token exchanged for a bearer token.
+  description: >-
+    REST API for Black Duck SCA (Hub) — projects, versions, components, vulnerabilities, policies, scans,
+    and reports. Each Black Duck server publishes its own OpenAPI 3 document at /api-doc/openapi3-public.json
+    and a Postman collection at /api-doc/postman-collection-public.json; authentication is via an API
+    token exchanged for a bearer token.
   humanURL: https://documentation.blackduck.com/category/api
   baseURL: https://polaris.blackduck.com
   tags:
@@ -156,24 +158,96 @@ apis:
   - type: Authentication
     url: authentication/black-duck-authentication.yml
   aid: black-duck:black-duck-sca-rest-api
-- aid: black-duck:black-duck-api
-  name: Black Duck API
-  description: 'Black Duck API as documented publicly: 7 operations. Contract generated from the documentation by API Evangelist (2026-10-03);
-
-    not the provider''s own document.'
-  humanURL: https://community.blackduck.com/s/article/vulnerable-bom-components-api-only-returns-10-vulnerabilities
-  baseURL: https://xxx.app.blackduck.com
+- aid: black-duck:black-duck-black-duck-api-api
+  name: Black Duck Black Duck API
+  description: The Black Duck API API from Black Duck — 1 operation(s) for black duck api.
+  humanURL: https://documentation.blackduck.com/category/api
+  baseURL: https://polaris.blackduck.com
+  tags:
+  - Black Duck API
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/black-duck-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/black-duck-black-duck-api-api-openapi.yml
   - type: JSONSchema
     url: json-schema/black-duck-get-api-v2-issues-sourcecodeinfo-response-schema.json
   - type: JSONSchema
-    url: json-schema/black-duck-put-api-projects19-a61354-doc25-d408374-ba71-f3-dd6983-versions-abqwe3-schema.json
+    url: >-
+      json-schema/black-duck-put-api-projects19-a61354-doc25-d408374-ba71-f3-dd6983-versions-abqwe3-schema.json
   - type: JSONSchema
-    url: json-schema/black-duck-put-api-projects-projectid-versions-projectversionid-components-com-schema.json
-
+    url: >-
+      json-schema/black-duck-put-api-projects-projectid-versions-projectversionid-components-com-schema.json
+- aid: black-duck:black-duck-issues-api
+  name: Black Duck Issues API
+  description: The Issues API from Black Duck — 1 operation(s) for issues.
+  humanURL: https://documentation.blackduck.com/category/api
+  baseURL: https://polaris.blackduck.com
+  tags:
+  - Issues
+  properties:
+  - type: OpenAPI
+    url: openapi/black-duck-issues-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/black-duck-get-api-v2-issues-sourcecodeinfo-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/black-duck-put-api-projects19-a61354-doc25-d408374-ba71-f3-dd6983-versions-abqwe3-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/black-duck-put-api-projects-projectid-versions-projectversionid-components-com-schema.json
+- aid: black-duck:black-duck-projects-api
+  name: Black Duck Projects API
+  description: The Projects API from Black Duck — 3 operation(s) for projects.
+  humanURL: https://documentation.blackduck.com/category/api
+  baseURL: https://polaris.blackduck.com
+  tags:
+  - Projects
+  properties:
+  - type: OpenAPI
+    url: openapi/black-duck-projects-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/black-duck-get-api-v2-issues-sourcecodeinfo-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/black-duck-put-api-projects19-a61354-doc25-d408374-ba71-f3-dd6983-versions-abqwe3-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/black-duck-put-api-projects-projectid-versions-projectversionid-components-com-schema.json
+- aid: black-duck:black-duck-search-api
+  name: Black Duck Search API
+  description: The Search API from Black Duck — 1 operation(s) for search.
+  humanURL: https://documentation.blackduck.com/category/api
+  baseURL: https://polaris.blackduck.com
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/black-duck-search-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/black-duck-get-api-v2-issues-sourcecodeinfo-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/black-duck-put-api-projects19-a61354-doc25-d408374-ba71-f3-dd6983-versions-abqwe3-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/black-duck-put-api-projects-projectid-versions-projectversionid-components-com-schema.json
+- aid: black-duck:black-duck-users-api
+  name: Black Duck Users API
+  description: The Users API from Black Duck — 1 operation(s) for users.
+  humanURL: https://documentation.blackduck.com/category/api
+  baseURL: https://polaris.blackduck.com
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/black-duck-users-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/black-duck-get-api-v2-issues-sourcecodeinfo-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/black-duck-put-api-projects19-a61354-doc25-d408374-ba71-f3-dd6983-versions-abqwe3-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/black-duck-put-api-projects-projectid-versions-projectversionid-components-com-schema.json
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec

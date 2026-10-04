@@ -1,0 +1,34 @@
+{
+  "provider": "black-duck",
+  "sources": [
+    "_ae-authored/black-duck-openapi-generated.yml"
+  ],
+  "outputs": [
+    "black-duck-black-duck-api-api-openapi.yml",
+    "black-duck-issues-api-openapi.yml",
+    "black-duck-projects-api-openapi.yml",
+    "black-duck-search-api-openapi.yml",
+    "black-duck-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "black-duck-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "black-duck-openapi-generated.yml: tagged paths PUT /api/projects/19a61354-doc2-5d40-8374-ba71f3dd6983/versions/abqwe336-dee2-4123-a47a-844gfa373a21/components/dc3dee66-4939-4dea-b22f-ead288b4f117/versions/588e017c-8d3f-41c7-95ad-61ae859d8607 -> Projects",
+    "black-duck-openapi-generated.yml: tagged paths PUT /api/projects/{projectid}/versions/{projectversionid}/components/{componentid} -> Projects",
+    "black-duck-openapi-generated.yml: tagged paths GET /api/projects/{projectid}/versions/{projectversionid}/vulnerable-bom-components -> Projects",
+    "black-duck-openapi-generated.yml: tagged paths GET /api/search/components-in-use -> Search",
+    "black-duck-openapi-generated.yml: tagged paths GET /api/v2/issues/sourceCodeInfo -> Issues",
+    "black-duck-openapi-generated.yml: tagged paths GET /api/v2/users -> Users",
+    "black-duck-openapi-generated.yml: tagged paths GET /api/{apiid} -> Black Duck API",
+    "black-duck-openapi-generated.yml: declared missing tag: Black Duck API",
+    "black-duck-openapi-generated.yml: declared missing tag: Issues",
+    "black-duck-openapi-generated.yml: declared missing tag: Projects",
+    "black-duck-openapi-generated.yml: declared missing tag: Search",
+    "black-duck-openapi-generated.yml: declared missing tag: Users",
+    "apis.yml register: written (+5 apis, 6 total)"
+  ],
+  "skipped": []
+}

@@ -1,0 +1,51 @@
+openapi: 3.2.0
+info:
+  title: Black Duck Users API
+  version: '2026-10-03'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-03: 7 operation(s) read from 10 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Black Duck has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 6
+    pages-with-code: 2
+    pages-read: 10
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-03'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://community.blackduck.com/s/article/vulnerable-bom-components-api-only-returns-10-vulnerabilities
+  - https://community.blackduck.com/s/article/How-to-access-Swagger-API-UI-in-SRM
+  - https://community.blackduck.com/s/article/vulnerable-bom-components-api-only-returns-10-vulnerabilities?nocache=https%3A%2F%2Fcommunity.blackduck.com%2Fs%2Farticle%2Fvulnerable-bom-components-api-only-returns-10-vulnerabilities
+  - https://community.blackduck.com/s/article/How-to-export-list-of-Users
+  - https://community.blackduck.com/s/article/How-to-extract-detailed-information-of-specific-CID-including-all-event-information-from-Coverity-Connect-using-REST-API
+  - https://community.blackduck.com/s/article/How-to-access-Swagger-API-UI-in-SRM?nocache=https%3A%2F%2Fcommunity.blackduck.com%2Fs%2Farticle%2FHow-to-access-Swagger-API-UI-in-SRM
+  - https://community.blackduck.com/s/article/Synopsys-Detect-fails-with-Signature-scanner-error-return-code-77
+  - https://community.blackduck.com/s/article/How-to-export-list-of-Users?nocache=https%3A%2F%2Fcommunity.blackduck.com%2Fs%2Farticle%2FHow-to-export-list-of-Users
+  - https://community.blackduck.com/s/article/List-all-component-in-use
+  - https://community.blackduck.com/s/article/Script-using-Black-Duck-Hub-Rest-API-to-is-failing-with-error-Input-request-parsing-error-or-http-status-412
+servers:
+- url: https://xxx.app.blackduck.com
+security:
+- bearer: []
+tags:
+- name: Users
+paths:
+  /api/v2/users:
+    get:
+      operationId: get_api_v2_users
+      tags:
+      - Users
+      summary: 'Synopsys Detect fails with Signature scanner error: return code 77'
+      x-source: https://community.blackduck.com/s/article/Synopsys-Detect-fails-with-Signature-scanner-error-return-code-77
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
