@@ -1,0 +1,21 @@
+generated: '2026-10-13'
+method: searched
+checked:
+- https://aws.amazon.com/marketplace/
+marketplace_apps: []
+edges:
+- partner_name: AWS Marketplace
+  partner: amazon-web-services
+  partner_match: aggregator
+  type: marketplace
+  marketplace: aws-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=b1ceac2d-14c1-4ac8-bb9b-23bac2a5d317
+  listing_count: 1
+  apps:
+  - Black Duck Application Security Testing (AST) for AWS
+  seller_name: Black Duck Software, Inc.
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
