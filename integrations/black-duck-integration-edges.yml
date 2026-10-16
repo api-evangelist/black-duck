@@ -107,7 +107,7 @@ edges:
     registered_name: com.blackduck/mcp-server
     register_id: com.blackduck/mcp-server
     detected_by: sweep-agent-tools.py
-    detected: '2026-10-14'
+    detected: '2026-10-15'
   mcp_registry:
     servers:
     - com.blackduck/mcp-server
