@@ -28,7 +28,13 @@
     "black-duck-openapi-generated.yml: declared missing tag: Projects",
     "black-duck-openapi-generated.yml: declared missing tag: Search",
     "black-duck-openapi-generated.yml: declared missing tag: Users",
-    "apis.yml register: written (+5 apis, 6 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "black-duck-black-duck-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "black-duck-issues-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "black-duck-projects-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "black-duck-search-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "black-duck-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
