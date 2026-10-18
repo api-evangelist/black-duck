@@ -2,11 +2,15 @@ generated: '2026-10-13'
 method: searched
 checked:
 - https://aws.amazon.com/marketplace/
+- https://cyclonedx.org/tool-center/
 - https://github.com/marketplace?type=apps
 - https://marketplace.atlassian.com/
 - https://marketplace.visualstudio.com/vscode
 - https://plugins.jetbrains.com/
+- https://raw.githubusercontent.com/ossf/ossf-landscape/0c5085851606608158f3adb796e5c22265ee174d/landscape.yml
 - https://registry.modelcontextprotocol.io/v0/servers
+- https://spdx.dev/use/spdx-tools/
+- https://www.openchainproject.org/community-of-conformance
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -123,6 +127,35 @@ edges:
   - namespace-domain
   detected_by: sweep-agent-tools.py
   first_seen: '2026-10-14'
+- partner_name: SPDX (Linux Foundation)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  category: SBOM standard (SPDX)
+  evidence: https://spdx.dev/use/spdx-tools/
+  contract_reference:
+    register: SPDX Tools (spdx.dev/use/spdx-tools)
+    standard: SPDX (ISO/IEC 5962)
+    spec_file: null
+    role: spdx-tool
+    registered_name: Black Duck SCA
+    tools:
+    - Black Duck SCA
+    website: https://www.blackduck.com/software-composition-analysis-tools/black-duck-sca.html
+    matched_domain: blackduck.com
+    matched_by: domain
+    classification: Consume/Diff  , Consume/Import  , Produce/Analyze  , Produce/Build  , Produce/Edit  , Transform/Merge  ,
+      Transform/Translate
+    version_support: 2.2  , 2.3  , 3.0 Complete
+    spdx_member: false
+    signal_note: 'participation only: a listed tool ships SPDX support; classification and versions are context'
+    detected_by: sweep-software-supply-chain.py
+    detected: '2026-10-18'
+  detected_by: sweep-software-supply-chain.py
+  first_seen: '2026-10-18'
 source:
 - https://github.com/marketplace?type=apps
 - https://marketplace.atlassian.com/
