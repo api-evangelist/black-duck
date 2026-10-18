@@ -202,6 +202,8 @@ apis:
   humanURL: https://documentation.blackduck.com/category/api
   baseURL: https://polaris.blackduck.com
   tags:
+  - Project
+  tags_raw:
   - Projects
   properties:
   - type: OpenAPI
@@ -238,6 +240,8 @@ apis:
   humanURL: https://documentation.blackduck.com/category/api
   baseURL: https://polaris.blackduck.com
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
