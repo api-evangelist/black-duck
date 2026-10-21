@@ -13,6 +13,9 @@ checked:
 - https://registry.modelcontextprotocol.io/v0/servers
 - https://spdx.dev/use/spdx-tools/
 - https://www.openchainproject.org/community-of-conformance
+- https://cloudsecurityalliance.org/membership/current
+- https://fidoalliance.org/certification/fido-certified-products/
+- https://www.cisa.gov/securebydesign/pledge/secure-design-pledge-signers
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -127,6 +130,37 @@ edges:
     detected: '2026-10-18'
   detected_by: sweep-software-supply-chain.py
   first_seen: '2026-10-18'
+- partner_name: MCP Registry
+  partner: mcp
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=com.blackduck
+  contract_reference:
+    register: registry.modelcontextprotocol.io
+    spec_file: null
+    role: mcp-server-listing
+    registered_name: com.blackduck/mcp-server
+    register_id: com.blackduck/mcp-server
+    detected_by: sweep-agent-tools.py
+    detected: '2026-10-19'
+  mcp_registry:
+    servers:
+    - com.blackduck/mcp-server
+    hosted_remote: 0
+    local_package: 1
+    transports:
+      stdio: 2
+    auth_declared: 0
+    catalog_declared: false
+    namespace_domains:
+    - blackduck.com
+  matched_by:
+  - namespace-domain
+  detected_by: sweep-agent-tools.py
+  first_seen: '2026-10-14'
 - partner_name: Cloud Security Alliance STAR Registry
   partner: null
   partner_match: register
@@ -157,37 +191,32 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-compliance-assurance.py
   first_seen: '2026-10-20'
-- partner_name: MCP Registry
-  partner: mcp
+- partner_name: CISA Secure by Design Pledge
+  partner: null
   partner_match: register
   type: register
   channel: standard-directory
   relationship: standard-participant
   direction: partner-built
-  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=com.blackduck
+  evidence: https://www.cisa.gov/securebydesign/pledge/secure-design-pledge-signers
+  category: secure-by-design software pledge
   contract_reference:
-    register: registry.modelcontextprotocol.io
+    register: CISA Secure by Design Pledge signers (cisa.gov/securebydesign/pledge)
+    standard: 'CISA Secure by Design Pledge (seven goals: MFA, default passwords, vulnerability classes, patches,
+      disclosure policy, CVEs, evidence of intrusions)'
     spec_file: null
-    role: mcp-server-listing
-    registered_name: com.blackduck/mcp-server
-    register_id: com.blackduck/mcp-server
-    detected_by: sweep-agent-tools.py
-    detected: '2026-10-15'
-  mcp_registry:
-    servers:
-    - com.blackduck/mcp-server
-    hosted_remote: 0
-    local_package: 1
-    transports:
-      stdio: 2
-    auth_declared: 0
-    catalog_declared: false
-    namespace_domains:
-    - blackduck.com
-  matched_by:
-  - namespace-domain
-  detected_by: sweep-agent-tools.py
-  first_seen: '2026-10-14'
+    role: secure-by-design-pledge-signer
+    registered_name: Black Duck Software
+    matched_domain: blackduck.com
+    matched_by: domain
+    signal_note: 'participation only: a voluntary public pledge listed by CISA; not an audit or conformance result
+      (no certified_products, no tier)'
+    detected_by: sweep-cloud-security-star.py
+    detected: '2026-10-20'
+    identity: wikidata Q136123906 'Black Duck Software' P856 https://www.blackduck.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-cloud-security-star.py
+  first_seen: '2026-10-20'
 source:
 - https://github.com/marketplace?type=apps
 - https://marketplace.atlassian.com/
