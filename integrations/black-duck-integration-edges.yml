@@ -17,6 +17,9 @@ checked:
 - https://fidoalliance.org/certification/fido-certified-products/
 - https://www.cisa.gov/securebydesign/pledge/secure-design-pledge-signers
 - eclipse/integrations/eclipse-integration-edges.yml
+- https://api.first.org/data/v1/teams
+- https://raw.githubusercontent.com/CVEProject/cve-website/dev/src/assets/data/CNAsList.json
+- https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -237,6 +240,45 @@ edges:
   category: IDE / developer extension marketplace listing
   badges:
   - Verified namespace
+- partner_name: CVE Program (CVE Numbering Authorities)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.cve.org/PartnerInformation/ListofPartners/partner/BlackDuck
+  category: Vulnerability disclosure (CVE Numbering Authority)
+  contract_reference:
+    register: CVE Program CNA list (github.com/CVEProject/cve-website CNAsList.json @ 239d3d9b68e0)
+    standard: CVE Program CNA Operational Rules (CVE Numbering Authority)
+    spec_file: null
+    role: cve-numbering-authority
+    registered_name: Black Duck Software, Inc.
+    matched_domain: blackduck.com
+    matched_by: domain
+    cna_id: CNA-2021-0013
+    cna_short_name: BlackDuck
+    cna_types:
+    - Vendor
+    - Researcher
+    cna_roles:
+    - CNA
+    scope: All Black Duck (formerly Synopsys Software Integrity Group) products, as well as vulnerabilities in third-party
+      software discovered by Black Duck that are not in another CNA’s scope.
+    top_level_root: MITRE Corporation
+    root: n/a
+    security_advisories:
+    - https://www.blackduck.com/blog/category.cyrc.html#1
+    disclosure_policy:
+    - https://www.blackduck.com/company/legal/vulnerability-disclosure-policy.html
+    country: USA
+    signal_note: listing as a CVE Numbering Authority = participation (a public commitment to assign CVE IDs and
+      publish advisories for its scope); never a count of CVEs
+    detected_by: sweep-vulnerability-disclosure-cna.py
+    detected: '2026-10-22'
+  detected_by: sweep-vulnerability-disclosure-cna.py
+  first_seen: '2026-10-22'
 source:
 - https://github.com/marketplace?type=apps
 - https://marketplace.atlassian.com/
