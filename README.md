@@ -64,6 +64,131 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Black Duck is a company surfaced as a portfolio company of general-catalyst and added to the API Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting the enrichment pipeline.
+Black Duck Software (formerly the Synopsys Software Integrity Group) is an application security company whose platform spans software composition analysis (SCA), static application security testing (SAST), dynamic application security testing (DAST), interactive application security testing (IAST), and open-source license and vulnerability management. Its API-first products — Black Duck SCA (Hub), Polaris, Coverity, and Seeker — expose REST APIs, webhooks, native CI/CD plug-ins, and the Detect command-line scanner so teams can automate open-source discovery, policy enforcement, and risk remediation across build pipelines such as Jenkins, GitHub Actions, GitLab CI, and Azure DevOps. Each Black Duck server publishes its own OpenAPI 3 document and Postman collection at /api-doc, and first-party Python and Go client libraries plus the Detect CLI wrap the API surface. This profile was seeded as a general-catalyst portfolio lead and enriched by the API Evangelist pipeline.
 
-Backed by: general-catalyst
+**Areas:** Company · Enterprise · Application Security · Software Composition Analysis · SAST · DAST · Open Source Security · DevSecOps · Vulnerability Management
+
+## Black Duck on APIs.io
+
+Everything profiled for Black Duck is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/black-duck/](https://apis.io/providers/black-duck/)** — or go straight to one of the APIs or properties below.
+
+### APIs (6)
+
+- [Black Duck SCA REST API](https://apis.io/apis/black-duck/black-duck-sca-rest-api/) — REST API for Black Duck SCA (Hub) — projects, versions, components, vulnerabilities, policies, scans, and reports. Each Black Duck server publishes its own…
+- [Black Duck Black Duck API](https://apis.io/apis/black-duck/black-duck-black-duck-api-api/) — The Black Duck API API from Black Duck — 1 operation(s) for black duck api.
+- [Black Duck Issues API](https://apis.io/apis/black-duck/black-duck-issues-api/) — The Issues API from Black Duck — 1 operation(s) for issues.
+- [Black Duck Projects API](https://apis.io/apis/black-duck/black-duck-projects-api/) — The Projects API from Black Duck — 3 operation(s) for projects.
+- [Black Duck Search API](https://apis.io/apis/black-duck/black-duck-search-api/) — The Search API from Black Duck — 1 operation(s) for search.
+- [Black Duck Users API](https://apis.io/apis/black-duck/black-duck-users-api/) — The Users API from Black Duck — 1 operation(s) for users.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [black-duck-mcp.yml](https://apis.io/servers/black-duck/black-duck-mcp-yml/)
+
+#### JSON Schema (3)
+
+The data models the API reads and writes.
+
+- [GetApiV2IssuesSourcecodeinfoResponse](https://apis.io/schemas/black-duck/black-duck-get-api-v2-issues-sourcecodeinfo-response/)
+- [PutApiProjectsProjectidVersionsProjectversionidComponentsCom](https://apis.io/schemas/black-duck/black-duck-put-api-projects-projectid-versions-projectversionid-components-com/)
+- [PutApiProjects19A61354Doc25D408374Ba71F3Dd6983VersionsAbqwe3](https://apis.io/schemas/black-duck/black-duck-put-api-projects19-a61354-doc25-d408374-ba71-f3-dd6983-versions-abqwe3/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Black Duck Context](https://apis.io/jsonld/black-duck/black-duck-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Black Duck API Rules](https://apis.io/rules/black-duck/black-duck-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Black Duck Authentication](https://apis.io/security/black-duck/black-duck-authentication/)
+- [Black Duck Domain Security](https://apis.io/security/black-duck/black-duck-domain-security/)
+- [Black Duck Trust Center](https://apis.io/security/black-duck/black-duck-trust-center/)
+- [Black Duck Vulnerability Disclosure](https://apis.io/security/black-duck/black-duck-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.blackduck.com/)
+- [Documentation](https://documentation.blackduck.com/category/api)
+- [Getting started](https://community.blackduck.com/s/article/Black-Duck-HUB-How-to-view-the-API-documentation)
+- [API reference](https://community.blackduck.com/s/article/Blackduck-API-documentation-swagger)
+- [Pricing](https://www.blackduck.com/software-composition-analysis-tools/black-duck-sca/get-pricing.html)
+- [Sign up](https://www.blackduck.com/software-composition-analysis-tools/black-duck-sca/get-pricing.html)
+- [Support](https://community.blackduck.com/s/)
+- [Blog](https://www.blackduck.com/blog.html)
+- [Security](https://www.blackduck.com/company/legal/security-commitments.html)
+- [Compliance](https://www.blackduck.com/company/legal/security-commitments.html)
+- [Privacy policy](https://www.blackduck.com/company/legal/privacy-policy.html)
+- [GitHub](https://github.com/blackducksoftware)
+- [Status](https://community.blackduck.com/s/black-duck-status)
+
+## API Evangelist rating
+
+**Kin Score 43.3** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 80.0 |
+| Contract quality | 21.6 |
+| Contract governance | 22.0 |
+| Operational transparency | 44.7 |
+| Developer ergonomics | 61.9 |
+| Access clarity | 39.5 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | — |
+
+**Regulatory alignment 27.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/black-duck/](https://apis.io/providers/black-duck/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Black Duck: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/black-duck/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
